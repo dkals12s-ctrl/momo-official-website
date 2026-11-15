@@ -255,6 +255,10 @@ button{border:0}img{max-width:100%}.frame{width:min(var(--max),calc(100% - 104px
   $('#footer-year').textContent = String(new Date().getFullYear());
   const quickActions = $('.quick-actions');
   const updateScroll = () => { quickActions.hidden = window.scrollY <= 700; };
+  quickActions.querySelector('.back-top').addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  });
   window.addEventListener('scroll', updateScroll, { passive: true });
   updateScroll();
 
