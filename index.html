@@ -292,7 +292,7 @@ button{border:0}img{max-width:100%}.frame{width:min(var(--max),calc(100% - 104px
         if (target.contains(document.activeElement)) return;
         target.animate(
           [{ opacity: .25, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }],
-          { duration: 300, delay: wideLayout.matches && target.classList.contains('intro-service-movement') ? 100 : 0, easing: 'ease-out', fill: 'backwards' }
+          { duration: 500, delay: wideLayout.matches && target.classList.contains('intro-service-movement') ? 100 : 0, easing: 'ease-out', fill: 'backwards' }
         );
       });
     }, { threshold: .12 });
